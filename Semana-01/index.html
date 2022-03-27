@@ -8,7 +8,10 @@
 	</head>
 	<body>
 		<header>
-
+			<figure>
+				<img src="" alt="logo"/>
+			</figure>
+			<h2>Trackgenix SA</h2>
 		</header>
 		<aside>
 
@@ -71,11 +74,11 @@
 			</section>
 			<section>
 				<h2>Get in touch with us</h2>
-				<form>
+				<form action="" method="">
 					<label for="name">Full Name</label>
-					<input type="text" id="name" name="full-name" placeholder="John Smith" required>
+					<input id="name" name="full-name" type="text" placeholder="John Smith" required>
 					<label for="email">Email Address</label>
-					<input type="email" id="email" name="email" placeholder="johnsmith@mail.com" required>
+					<input id="email" name="email" type="email" placeholder="johnsmith@mail.com" required>
 					<label for="area">Choose a department:</label>
 					<select id="area" name="area">
 						<option value="default">-Area-</option>
@@ -85,18 +88,18 @@
 					</select>
 					<fieldset>
 						<legend>Priority</legend>
-						<input type="radio" id="low" name="priority" checked>
+						<input id="low" name="priority" type="radio" checked>
 						<label for="low">Low</label>
-						<input type="radio" id="medium" name="priority">
+						<input id="medium" name="priority" type="radio">
 						<label for="medium">Medium</label>
-						<input type="radio" id="high" name="priority">
+						<input id="high" name="priority" type="radio">
 						<label for="high">High</label>
 					</fieldset>
 					<label for="inquiry">Ask about our system</label>
-					<textarea id="inquiry" name="inquiry" placeholder="Enter your message"></textarea>
-					<input type="checkbox" id="captcha" name="captcha">
+					<textarea id="inquiry" name="inquiry" placeholder="Enter your message" required></textarea>
+					<input id="captcha" name="captcha" type="checkbox">
 					<label for="captcha">I am not a robot</label>
-					<input type="checkbox" id="copy" name="copy">
+					<input id="copy" name="copy" type="checkbox">
 					<label for="copy">Send me a copy</label>
 					<button type="submit">Submit</button>
 					<button type="reset">Reset</button>
@@ -151,3 +154,7 @@
 </html>
 <a href="https://www.w3schools.com">This is a link</a>
 <img src="/images/w3schools.jpg" alt="W3Schools.com" width="104" height="142"> se puede usar width
+<figure>
+  <img src="/images/html-reference-logo.png" alt="HTML Reference logo">
+  <figcaption>The HTML Reference logo</figcaption>
+</figure>
