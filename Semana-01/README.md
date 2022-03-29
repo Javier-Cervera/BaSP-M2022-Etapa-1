@@ -1,6 +1,7 @@
-# Landing page HTML
-This is the first approach to the Landing page coding, with just the HTML
-```
-No instructions yet
-```
-![landing](https://user-images.githubusercontent.com/63616157/160051946-7191cbce-6bbb-49af-b926-2677a360acc1.png)
+# Trackgenix
+Trackgenix facilitates the tracking of hours worked by each employee in each project and work team. 
+
+## To view the index visit:
+https://javier-cervera.github.io/BaSP-M2022-Etapa-1/Semana-01/
+
+## Javier Cervera
