@@ -1,1 +1,30 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* font-family: 'Roboto', sans-serif;
+400 regular 500 medium 700 bold
+*/
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+}
+
+header {
+	height: 77px;
+	background-color: #373867;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+header figure {
+	display: inline;
+
+}
+
+header img {
+	width: 77.79px;
+}
+
+header h1 {
+	display: inline;
+}
