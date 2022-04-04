@@ -118,24 +118,47 @@ section {
 	display: inline-block;
 	margin: 57px 78px 0px 69px;
 	width: 1110px;
-	padding-bottom: 95px;
 	border: 1px solid black;
+}
+
+main > section::after {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #AFAFC2;
+	border-radius: 4px;
+	content: "";
 }
 
 footer {
 	position: relative;
+	width: 87.2%;
 	left: 184px;
 }
 
 .intro-section div {
+	position: relative;
 	width: 47%;
 	display: inline-block;
 	vertical-align: top;
 }
 
+.intro-section .subheader-typo {
+	margin: 19px 0px 42px;
+}
+
+.intro-section a {
+	padding: 14px 30px;
+	margin-top: 3%;
+	position: absolute;
+	right: 0px;
+	border: 1px solid #373867;
+	border-radius: 5px;
+}
+
 .intro-section figure {
 	display: inline-block;
-	margin-left: 2.5%;
+	margin: 1% 0 95px 2.5%;
 	width: 50%;
 }
 
@@ -144,8 +167,56 @@ footer {
 	width: 100%;
 }
 
-.funtionalities-section section {
-	margin: 0px;
+.functionalities-section section {
+	margin: 50px 0 29px;
+	display: inline-block;
+	width: 523px;
+	height: 213px;
+	vertical-align: top;
+}
+
+.functionalities-section figure{
+	float: left;
+	margin: 7px 23px 0 0;
+}
+
+.functionalities-section h3{
+	display: inline-block;
+	margin: 31px -30px 17px 0;
+}
+
+.functionalities-section section:nth-last-child(1),
+.functionalities-section section:nth-last-child(2) {
+	margin-bottom: 95px;
+}
+
+.functionalities-section section:nth-last-child(2),
+.functionalities-section section:nth-last-child(3) {
+	float: right;
+}
+
+
+
+
+
+
+/* Line after section title */
+
+h2.title-typo {
+	width: fit-content;
+}
+section div {
+	width: fit-content;
+}
+
+h2.title-typo::after {
+	display: block;
+	width: calc(100% + 30px);
+	margin-top: 9px;
+	height: 3px;
+	background-color: #AACE9B;
+	border-radius: 4px;
+	content: "";
 }
 
 /* Typography */
@@ -172,4 +243,10 @@ footer {
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 35.2px;
+}
+
+.button-typo {
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 18px;
 }
