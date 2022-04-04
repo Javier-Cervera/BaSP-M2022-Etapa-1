@@ -190,16 +190,53 @@ footer {
 	margin-bottom: 95px;
 }
 
-.functionalities-section section:nth-last-child(2),
+.functionalities-section section:nth-last-child(1),
 .functionalities-section section:nth-last-child(3) {
 	float: right;
 }
 
+.reasons-section article {
+	width: 440px;
+	position: relative;
+	height: 621px;
+	margin-top: 50px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: rgba(55,56,103,0.1);
+	padding: 20px;
+}
 
+.reasons-section h3 {
+	margin: 20px 0;
+}
 
+.reasons-section a {
+	padding: 10px 20px;
+	margin-top: 3%;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	border: 1px solid #373867;
+	border-radius: 5px;
+}
 
+.reasons-section article:nth-last-child(1),
+.reasons-sectionn article:nth-last-child(2) {
+	margin-bottom: 95px;
+}
 
+.reasons-section article:nth-last-child(1),
+.reasons-section article:nth-last-child(3) {
+	margin-left: 79.93px;
+}
 
+.story-section p:nth-of-type(1) {
+	margin-top: 50px;
+}
+
+.story-section p:nth-of-type(2) {
+	margin: 23.4px 0 95px;
+}
 /* Line after section title */
 
 h2.title-typo {
