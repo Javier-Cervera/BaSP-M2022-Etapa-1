@@ -4,7 +4,7 @@
 400 regular 500 medium 700 bold
 */
 html {
-	width: 1440px;
+	/* width: 1440px; */
 	box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@ header h1 {
 aside {
 	position: sticky;
 	padding: 22px 13px;
-	width: 184px;
+	width: 12.8%;
 	margin-right: -184px;
 	top: 0;
 	height: 900px;
@@ -93,7 +93,6 @@ aside li > a::after {
 	content: "";
 }
 
-
 aside div {
 	display: inline-block;
 	margin: 19px 0px 17px;
@@ -111,7 +110,16 @@ aside img {
 
 main {
 	position: relative;
+	width: 87.2%;
 	left: 184px;
+}
+
+section {
+	display: inline-block;
+	margin: 57px 78px 0px 69px;
+	width: 1110px;
+	padding-bottom: 95px;
+	border: 1px solid black;
 }
 
 footer {
@@ -119,3 +127,49 @@ footer {
 	left: 184px;
 }
 
+.intro-section div {
+	width: 47%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.intro-section figure {
+	display: inline-block;
+	margin-left: 2.5%;
+	width: 50%;
+}
+
+.intro-section img {
+	display: inline-block;
+	width: 100%;
+}
+
+.funtionalities-section section {
+	margin: 0px;
+}
+
+/* Typography */
+
+.header-typo {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 46.9px;
+}
+
+.subheader-typo {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 23.4px;
+}
+
+.intro-paragraph {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.title-typo {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 35.2px;
+}
