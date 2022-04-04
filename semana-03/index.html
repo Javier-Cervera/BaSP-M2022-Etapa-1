@@ -143,21 +143,27 @@
 					<a class="button-typo" href="#">More</a>
 				</article>
 			</section>
-			<section>
+			<section class="form-section">
 				<h2 class="title-typo">Get in touch with us</h2>
 				<form>
-					<label for="name">Full Name</label>
-					<input id="name" name="full-name" type="text" placeholder="John Smith" required>
-					<label for="email">Email Address</label>
-					<input id="email" name="email" type="email" placeholder="johnsmith@mail.com" required>
-					<label for="area">Choose a department:</label>
-					<select id="area" name="area">
-						<option value="default">-Area-</option>
-						<option value="human-resources">Human Resources</option>
-						<option value="systems">Systems</option>
-						<option value="commercialization">Commercialization</option>
-					</select>
-					<fieldset>
+					<div>
+						<label for="name">Full Name</label>
+						<input id="name" name="full-name" type="text" placeholder="John Smith" required>
+					</div>
+					<div class="form-right">
+						<label for="email">Email Address</label>
+						<input id="email" name="email" type="email" placeholder="johnsmith@mail.com" required>
+					</div>
+					<div>
+						<label for="area">Choose a department:</label>
+						<select id="area" name="area">
+							<option value="default">-Area-</option>
+							<option value="human-resources">Human Resources</option>
+							<option value="systems">Systems</option>
+							<option value="commercialization">Commercialization</option>
+						</select>
+					</div>
+					<fieldset class="form-right">
 						<legend>Priority</legend>
 						<input id="low" name="priority" type="radio" checked>
 						<label for="low">Low</label>
@@ -166,14 +172,20 @@
 						<input id="high" name="priority" type="radio">
 						<label for="high">High</label>
 					</fieldset>
-					<label for="inquiry">Ask about our system</label>
-					<textarea id="inquiry" name="inquiry" placeholder="Enter your message" required></textarea>
-					<input id="captcha" name="captcha" type="checkbox">
-					<label for="captcha">I am not a robot</label>
-					<input id="copy" name="copy" type="checkbox">
-					<label for="copy">Send me a copy</label>
-					<button type="submit">Submit</button>
-					<button type="reset">Reset</button>
+						<label for="inquiry">Ask about our system</label>
+						<textarea id="inquiry" name="inquiry" placeholder="Enter your message" required></textarea>
+					<div class="div-checkbox">
+						<input id="captcha" name="captcha" type="checkbox">
+						<label for="captcha">I am not a robot</label>
+					</div>
+					<div class="div-checkbox">
+						<input id="copy" name="copy" type="checkbox">
+						<label for="copy">Send me a copy</label>
+					</div>
+					<div class="buttons">
+						<button class="button-typo" type="submit">Submit</button>
+						<button	class="button-typo" type="reset">Reset</button>
+					</div>
 				</form>
 			</section>
 			<section class="story-section">
@@ -194,31 +206,37 @@
 					 tortor. Donec gravida sollicitudin metus, ut porttitor nisl scelerisque nec. Aenean eu consequat felis.
 				</p>
 			</section>
-			<section aria-label="Links section">
-				<h4>Products</h4>
-				<ol>
-					<li><a href="#">Functionalities</a></li>
-					<li><a href="#">Downloads</a></li>
-					<li><a href="#">Integrations</a></li>
-					<li><a href="#">Extras</a></li>
-				</ol>
-				<h4>Company</h4>
-				<ol>
-					<li><a href="#">About us</a></li>
-					<li><a href="#">Clients</a></li>
-					<li><a href="#">Resources</a></li>
-					<li><a href="#">Blog</a></li>
-				</ol>
-				<h4>Support</h4>
-				<ol>
-					<li><a href="#">Help Center</a></li>
-					<li><a href="#">Tutorials</a></li>
-					<li><a href="#">API</a></li>
-					<li><a href="#">Contact us</a></li>
-				</ol>
+			<section class="links-section subheader-typo" aria-label="Links section">
+				<div>
+					<h4>Products</h4>
+					<ol>
+						<li><a href="#">Functionalities</a></li>
+						<li><a href="#">Downloads</a></li>
+						<li><a href="#">Integrations</a></li>
+						<li><a href="#">Extras</a></li>
+					</ol>
+				</div>
+				<div>
+					<h4>Company</h4>
+					<ol>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Clients</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#">Blog</a></li>
+					</ol>
+				</div>
+				<div>
+					<h4>Support</h4>
+					<ol>
+						<li><a href="#">Help Center</a></li>
+						<li><a href="#">Tutorials</a></li>
+						<li><a href="#">API</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ol>
+				</div>
 			</section>
 		</main>
-		<footer>
+		<footer class="subheader-typo">
 			<nav>
 				<a href="https://www.linkedin.com/company/radium-rocket/">
 					<img src="./assets/icons/linkedin-logo.png" alt="LinkedIn logo">

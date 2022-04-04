@@ -111,14 +111,14 @@ aside img {
 main {
 	position: relative;
 	width: 87.2%;
-	left: 184px;
+	float: right;
 }
 
 section {
 	display: inline-block;
 	margin: 57px 78px 0px 69px;
 	width: 1110px;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 }
 
 main > section::after {
@@ -130,10 +130,37 @@ main > section::after {
 	content: "";
 }
 
+main > section:last-child::after {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #AACE9B;
+	border-radius: 4px;
+	content: "";
+}
+
 footer {
+	display: inline-block;
 	position: relative;
-	width: 87.2%;
+	height: 100px;
+	width: 1110px;
 	left: 184px;
+	margin: 0 78px 0px 69px;
+	padding: 16px 0 15px;
+}
+
+footer nav {
+	display: inline-block;
+	margin-top: 5px;
+}
+
+footer p {
+	float: right;
+	clear: right;
+}
+
+footer p:first-of-type {
+	margin-bottom: 20px;
 }
 
 .intro-section div {
@@ -210,6 +237,10 @@ footer {
 	margin: 20px 0;
 }
 
+.reasons-section p {
+	margin-bottom: 23.4px;
+}
+
 .reasons-section a {
 	padding: 10px 20px;
 	margin-top: 3%;
@@ -230,12 +261,99 @@ footer {
 	margin-left: 79.93px;
 }
 
+.form-section {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+}
+
+.form-section form {
+	margin: 50px 0 95px;
+}
+
+.form-section .form-right {
+	float: right;
+}
+
+.form-section label{
+	display: inline-block;
+	width: 100%;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+	display: inline-block;
+	margin: 7.5px 0 12px;
+	width: 100%;
+}
+
+.form-section textarea {
+	height: 117px;
+}
+
+.form-section div,
+.form-section fieldset{
+	display: inline-block;
+	width: 48%;
+}
+
+.form-section fieldset label {
+	width: fit-content;
+	margin-right: 20%;
+}
+
+.form-section input[type=radio],
+.form-section input[type=checkbox],
+.form-section label[for=copy],
+.form-section label[for=captcha] {
+	width: fit-content;
+}
+
+.form-section .div-checkbox {
+	width: 15%;
+}
+
+.form-section button[type=submit] {
+	margin-right: 41.25px;
+	padding: 14px 31px;
+	background: #AACE9B;
+	border-radius: 5px;
+	text-align: center;
+	border: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+.form-section button[type=reset] {
+	padding: 13px 31px;
+	background: #FFFFFF;
+	border-radius: 5px;
+	text-align: center;
+	border: 1px solid #373867;
+	font-family: 'Roboto', sans-serif;
+}
+
+.form-section .buttons{
+	display: block;
+	margin-top: 40px;
+}
+
 .story-section p:nth-of-type(1) {
 	margin-top: 50px;
 }
 
 .story-section p:nth-of-type(2) {
 	margin: 23.4px 0 95px;
+}
+
+.links-section div{
+	margin: 57px 10% 95px;
+	display: inline-block;
+}
+
+.links-section ol {
+	list-style-type: decimal;
+	padding-left: 20px;
 }
 /* Line after section title */
 
