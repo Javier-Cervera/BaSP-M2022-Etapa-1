@@ -10,7 +10,7 @@ Download or clone the entire project from the github repo. Once downloaded, you 
 
 ## Usage
 Each week's work is based on the previous one without modifying it. The progress can be seen comparing each loaded page
- or code
+ or code.
 
 ## Weekly development
 

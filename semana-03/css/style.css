@@ -13,14 +13,14 @@ html {
 }
 
 a {
-	text-decoration: none;
 	color: inherit;
+	text-decoration: none;
 }
 
 body {
+	height: max-content;
 	color: #373867;
 	font-family: 'Roboto', sans-serif;
-	height: max-content;
 }
 
 header {
@@ -28,7 +28,6 @@ header {
 	width: 100%;
 	height: 77px;
 	background-color: #373867;
-	font-weight: 700;
 }
 
 header img {
@@ -43,19 +42,18 @@ header h1 {
 	margin-top: -20px;
 	top: 50%;
 	left: 150px;
-	font-size: 40px;
 	color: #ffffff;
 }
 
 aside {
 	position: sticky;
-	padding: 22px 13px;
-	width: 12.8%;
-	margin-right: -184px;
-	top: 0;
-	height: 900px;
-	background-color: #AACE9B;
 	float: left;
+	width: 12.8%;
+	height: 900px;
+	margin-right: -184px;
+	padding: 22px 13px;
+	top: 0;
+	background-color: #AACE9B;
 }
 
 aside span {
@@ -63,23 +61,23 @@ aside span {
 	width: 100%;
 	padding: 0.6px;
 	font-size: 14px;
-	line-height: 16.4px;
 	font-weight: 700;
+	line-height: 16.4px;
 }
 
 aside span::after {
 	display: block;
 	width: 47px;
-	margin: 9px 0px 22px 0px;
 	height: 3px;
+	margin: 9px 0px 22px 0px;
 	background-color: #373867;
 	border-radius: 4px;
 	content: "";
 }
 
 aside li {
-	font-weight: 400;
 	font-size: 12px;
+	font-weight: 400;
 	line-height: 14px;
 }
 
@@ -110,14 +108,14 @@ aside img {
 
 main {
 	position: relative;
-	width: 87.2%;
 	float: right;
+	width: 87.2%;
 }
 
 section {
 	display: inline-block;
-	margin: 57px 78px 0px 69px;
 	width: 1110px;
+	margin: 57px 78px 0px 69px;
 	/* border: 1px solid black; */
 }
 
@@ -140,18 +138,23 @@ main > section:last-child::after {
 }
 
 footer {
-	display: inline-block;
 	position: relative;
-	height: 100px;
+	display: inline-block;
 	width: 1110px;
-	left: 184px;
+	height: 100px;
 	margin: 0 78px 0px 69px;
 	padding: 16px 0 15px;
+	left: 184px;
 }
 
 footer nav {
 	display: inline-block;
+	width: 50%;
 	margin-top: 5px;
+}
+
+footer a {
+	margin-right: 4%;
 }
 
 footer p {
@@ -165,8 +168,8 @@ footer p:first-of-type {
 
 .intro-section div {
 	position: relative;
-	width: 47%;
 	display: inline-block;
+	width: 47%;
 	vertical-align: top;
 }
 
@@ -175,9 +178,9 @@ footer p:first-of-type {
 }
 
 .intro-section a {
-	padding: 14px 30px;
-	margin-top: 3%;
 	position: absolute;
+	margin-top: 3%;
+	padding: 14px 30px;
 	right: 0px;
 	border: 1px solid #373867;
 	border-radius: 5px;
@@ -185,8 +188,8 @@ footer p:first-of-type {
 
 .intro-section figure {
 	display: inline-block;
-	margin: 1% 0 95px 2.5%;
 	width: 50%;
+	margin: 1% 0 95px 2.5%;
 }
 
 .intro-section img {
@@ -195,10 +198,10 @@ footer p:first-of-type {
 }
 
 .functionalities-section section {
-	margin: 50px 0 29px;
 	display: inline-block;
 	width: 523px;
 	height: 213px;
+	margin: 50px 0 29px;
 	vertical-align: top;
 }
 
@@ -223,14 +226,14 @@ footer p:first-of-type {
 }
 
 .reasons-section article {
-	width: 440px;
 	position: relative;
+	display: inline-block;
+	width: 440px;
 	height: 621px;
 	margin-top: 50px;
-	display: inline-block;
-	vertical-align: top;
-	background-color: rgba(55,56,103,0.1);
 	padding: 20px;
+	background-color: rgba(55,56,103,0.1);
+	vertical-align: top;
 }
 
 .reasons-section h3 {
@@ -242,9 +245,9 @@ footer p:first-of-type {
 }
 
 .reasons-section a {
-	padding: 10px 20px;
-	margin-top: 3%;
 	position: absolute;
+	margin-top: 3%;
+	padding: 10px 20px;
 	bottom: 20px;
 	left: 20px;
 	border: 1px solid #373867;
@@ -284,8 +287,8 @@ footer p:first-of-type {
 .form-section select,
 .form-section textarea {
 	display: inline-block;
-	margin: 7.5px 0 12px;
 	width: 100%;
+	margin: 7.5px 0 12px;
 }
 
 .form-section textarea {
@@ -318,19 +321,19 @@ footer p:first-of-type {
 	margin-right: 41.25px;
 	padding: 14px 31px;
 	background: #AACE9B;
-	border-radius: 5px;
-	text-align: center;
 	border: none;
+	border-radius: 5px;
 	font-family: 'Roboto', sans-serif;
+	text-align: center;
 }
 
 .form-section button[type=reset] {
 	padding: 13px 31px;
 	background: #FFFFFF;
-	border-radius: 5px;
-	text-align: center;
 	border: 1px solid #373867;
+	border-radius: 5px;
 	font-family: 'Roboto', sans-serif;
+	text-align: center;
 }
 
 .form-section .buttons{
@@ -347,28 +350,25 @@ footer p:first-of-type {
 }
 
 .links-section div{
-	margin: 57px 10% 95px;
 	display: inline-block;
+	margin: 57px 10% 95px;
 }
 
 .links-section ol {
-	list-style-type: decimal;
 	padding-left: 20px;
+	list-style-type: decimal;
 }
 /* Line after section title */
 
 h2.title-typo {
 	width: fit-content;
 }
-section div {
-	width: fit-content;
-}
 
 h2.title-typo::after {
 	display: block;
 	width: calc(100% + 30px);
-	margin-top: 9px;
 	height: 3px;
+	margin-top: 9px;
 	background-color: #AACE9B;
 	border-radius: 4px;
 	content: "";
