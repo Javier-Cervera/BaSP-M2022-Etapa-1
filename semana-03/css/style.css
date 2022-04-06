@@ -1,15 +1,13 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-/* font-family: 'Roboto', sans-serif;
-400 regular 500 medium 700 bold
-*/
+
 html {
-	/* width: 1440px; */
+	width: 1440px;
 	box-sizing: border-box;
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 a {
@@ -48,7 +46,7 @@ header h1 {
 aside {
 	position: sticky;
 	float: left;
-	width: 12.8%;
+	width: 184px;
 	height: 900px;
 	margin-right: -184px;
 	padding: 22px 13px;
@@ -109,7 +107,7 @@ aside img {
 main {
 	position: relative;
 	float: right;
-	width: 87.2%;
+	width: 1255px;
 }
 
 section {
@@ -119,51 +117,31 @@ section {
 	/* border: 1px solid black; */
 }
 
-main > section::after {
-	display: block;
-	width: 100%;
-	height: 3px;
-	background-color: #AFAFC2;
-	border-radius: 4px;
-	content: "";
-}
-
-main > section:last-child::after {
-	display: block;
-	width: 100%;
-	height: 3px;
-	background-color: #AACE9B;
-	border-radius: 4px;
-	content: "";
-}
-
 footer {
 	position: relative;
 	display: inline-block;
-	width: 1110px;
+	width: 1255px;
 	height: 100px;
-	margin: 0 78px 0px 69px;
-	padding: 16px 0 15px;
+	padding: 0px 78px 15px 69px;
 	left: 184px;
 }
 
 footer nav {
-	display: inline-block;
+	float: left;
 	width: 50%;
-	margin-top: 5px;
+	margin-top: 30px;
 }
 
 footer a {
-	margin-right: 4%;
+	margin-right: 6%;
 }
 
 footer p {
 	float: right;
-	clear: right;
 }
 
 footer p:first-of-type {
-	margin-bottom: 20px;
+	margin: 16px 0px 23.4px;
 }
 
 .intro-section div {
@@ -205,12 +183,12 @@ footer p:first-of-type {
 	vertical-align: top;
 }
 
-.functionalities-section figure{
+.functionalities-section figure {
 	float: left;
 	margin: 7px 23px 0 0;
 }
 
-.functionalities-section h3{
+.functionalities-section h3 {
 	display: inline-block;
 	margin: 31px -30px 17px 0;
 }
@@ -246,7 +224,6 @@ footer p:first-of-type {
 
 .reasons-section a {
 	position: absolute;
-	margin-top: 3%;
 	padding: 10px 20px;
 	bottom: 20px;
 	left: 20px;
@@ -255,7 +232,7 @@ footer p:first-of-type {
 }
 
 .reasons-section article:nth-last-child(1),
-.reasons-sectionn article:nth-last-child(2) {
+.reasons-section article:nth-last-child(2) {
 	margin-bottom: 95px;
 }
 
@@ -278,7 +255,7 @@ footer p:first-of-type {
 	float: right;
 }
 
-.form-section label{
+.form-section label {
 	display: inline-block;
 	width: 100%;
 }
@@ -293,10 +270,11 @@ footer p:first-of-type {
 
 .form-section textarea {
 	height: 117px;
+	margin-bottom: 0px;
 }
 
 .form-section div,
-.form-section fieldset{
+.form-section fieldset {
 	display: inline-block;
 	width: 48%;
 }
@@ -315,6 +293,7 @@ footer p:first-of-type {
 
 .form-section .div-checkbox {
 	width: 15%;
+	margin-top: 40px;
 }
 
 .form-section button[type=submit] {
@@ -336,7 +315,7 @@ footer p:first-of-type {
 	text-align: center;
 }
 
-.form-section .buttons{
+.form-section .buttons {
 	display: block;
 	margin-top: 40px;
 }
@@ -349,16 +328,37 @@ footer p:first-of-type {
 	margin: 23.4px 0 95px;
 }
 
-.links-section div{
+.links-section div {
 	display: inline-block;
-	margin: 57px 10% 95px;
+	margin: 0px 10% 95px;
 }
 
 .links-section ol {
 	padding-left: 20px;
 	list-style-type: decimal;
 }
-/* Line after section title */
+
+/* Line after each section */
+
+main > section::after {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #AFAFC2;
+	border-radius: 4px;
+	content: "";
+}
+
+main > section:last-child::after {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #AACE9B;
+	border-radius: 4px;
+	content: "";
+}
+
+/* Line after each section title */
 
 h2.title-typo {
 	width: fit-content;
@@ -405,3 +405,18 @@ h2.title-typo::after {
 	font-weight: 500;
 	line-height: 18px;
 }
+
+/* Form styles */
+
+form input,
+form select,
+form textarea {
+	padding: 10px 12px;
+	border: 1px solid #373867;
+	border-radius: 4px;
+	color: rgba(55, 56, 103, 0.5);
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+}
+
