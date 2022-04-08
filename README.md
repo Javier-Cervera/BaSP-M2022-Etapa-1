@@ -28,4 +28,12 @@ It can be visited on:
 
 https://javier-cervera.github.io/BaSP-M2022-Etapa-1/semana-03/
 
+### Week 04
+We have done the refactoring using Flexbox.
+
+It can be visited on:
+
+https://javier-cervera.github.io/BaSP-M2022-Etapa-1/semana-04/
+
+
 _By Javier Cervera_
