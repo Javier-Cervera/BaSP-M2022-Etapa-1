@@ -1,5 +1,6 @@
 .header {
 	display: flex;
+	position: fixed;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
@@ -18,18 +19,18 @@
 	color: #ffffff;
 }
 
-.header .sidebar-menu {
+.header .sidebar-icon {
 	width: 30px;
 }
 
 @media only screen and (min-width: 768px) {
-	.header .sidebar-menu {
+	.header .sidebar-icon {
 		width: 45px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	.header .sidebar-menu {
-		display: none;
+	.header .sidebar-icon {
+		visibility: hidden;
 	}
 }
