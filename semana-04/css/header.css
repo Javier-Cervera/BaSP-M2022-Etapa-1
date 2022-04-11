@@ -23,13 +23,13 @@
 	width: 30px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 480px) {
 	.header .sidebar-icon {
 		width: 45px;
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
 	.header .sidebar-icon {
 		visibility: hidden;
 	}

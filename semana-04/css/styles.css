@@ -18,84 +18,44 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+.aside-main-footer-container {
+	display: flex;
+	justify-content: space-between;
+}
+
 .flex-container {
 	display: flex;
 }
 
-/* Typography */
-
-.header-typo {
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 37.5px;
+.aside-main-footer-container .main-footer-container {
+	flex-grow: 1;
 }
 
-.paragraph-typo {
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 17.5px;
-}
-
-.intro-paragraph {
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 15px;
-}
-
-.section-typo {
-	font-size: 25px;
-	font-weight: 700;
-	line-height: 28.8px;
-}
-
-.title-typo {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 18.5px;
-}
-
-.button-typo {
-	font-size: 12px;
-	font-weight: 500;
-	line-height: 15px;
-}
-
-.form-section {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 16px;
+.main-footer-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding: 4.5% 5.8% 0;
+	margin-top: 77px;
 }
 
 @media only screen and (min-width: 768px) {
-	/* Typography */
-
-	.header-typo {
-		font-size: 40px;
-		line-height: 46.9px;
-	}
-
-	.paragraph-typo {
-		font-size: 20px;
-		line-height: 23.4px;
-	}
-
-	.intro-paragraph {
-		font-size: 15px;
-		line-height: 18px;
-	}
-
-	.section-typo {
-		font-size: 30px;
-		line-height: 35.2px;
-	}
-
-	.title-typo {
-		font-size: 30px;
-		line-height: 35.2px;
-	}
-
-	.button-typo {
-		font-size: 15px;
-		line-height: 18px;
+	
+	.main-footer-container {
+		margin-left: 184px;
 	}
 }
+/*
+5.56% mobile
+5.82% desktop
+8% tablet
+6% ~73px en desktop margin left right content  5.83%
+57px --> 4.5%
+42px -->  3.35% desktop subtiutle intro
+19px --> 1.5
+36px --> 2.85% tablet?
+9px --> 0.72%
+95px --> 7.6% section lines
+56px --> 4.5%
+*/

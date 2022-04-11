@@ -1,0 +1,86 @@
+.header-typo {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 37.5px;
+}
+
+.sidebar-typo{
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
+}
+
+.sidebar-typo span {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16.4px;
+}
+
+.paragraph-typo {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18.5px;
+}
+
+.intro-paragraph {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17.5px;
+}
+
+.section-typo {
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 28.8px;
+}
+
+.title-typo {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22.5px;
+}
+
+.button-typo {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 15px;
+}
+
+.form-section {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+}
+
+@media only screen and (min-width: 480px) {
+	
+	.header-typo {
+		font-size: 40px;
+		line-height: 46.9px;
+	}
+	
+	.paragraph-typo {
+		font-size: 20px;
+		line-height: 23.4px;
+	}
+
+	.intro-paragraph {
+		font-size: 15px;
+		line-height: 18px;
+	}
+	
+	.section-typo {
+		font-size: 30px;
+		line-height: 35.2px;
+	}
+
+	.title-typo {
+		font-size: 30px;
+		line-height: 35.2px;
+	}
+
+	.button-typo {
+		font-size: 15px;
+		line-height: 18px;
+	}
+}
