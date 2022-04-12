@@ -3,7 +3,6 @@ main {
 	flex-direction: column;
 }
 
-
 section {
 	flex-grow: 1;
 }
@@ -44,7 +43,7 @@ section {
 .section-line {
 	width: 100%;
 	height: 3px;
-	margin: 7.6% 0 4.5%;
+	margin: 8.8% 0 4.5%;
 	background-color: #AFAFC2;
 	border-radius: 4px;
 	content: "";
@@ -53,8 +52,80 @@ section {
 .main-footer-container > .section-line {
 	background-color: #AACE9B;
 }
+
+.functionalities-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+h2.section-typo {
+	width: fit-content;
+	max-width: 94.2%;
+	margin-bottom: 5%;
+}
+
+h2.section-typo::after {
+	display: block;
+	width: calc(100% + 30px);
+	height: 3px;
+	margin-top: 15px;
+	background-color: #AACE9B;
+	border-radius: 4px;
+	content: "";
+}
+
+.functionalities-section section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 5%;
+}
+
+.functionalities-section h3 {
+	margin: 4% 0 2%;
+}
+
+.functionalities-section figure {
+	display: flex;
+	order: -1;
+}
+
+.functionalities-section figure img{
+	width: 103px;
+}
+
+@media only screen and (min-width: 480px) {
+
+	.functionalities-section section {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: center;
+		align-content: flex-start;
+		text-align: left;
+		height: 265px;
+	}
+
+	.functionalities-section h3 {
+		width: 50%;
+	}
+
+	.functionalities-section p {
+		width: 54%;
+	}
+
+	.functionalities-section figure img{
+		width: 198px;
+		margin-top: 10px;
+		margin-right: 10px;
+	}
+}
+
 @media only screen and (min-width: 1024px) {
-	
+
 	.intro-section {
 		flex-wrap: nowrap;
 		justify-content: space-evenly;
@@ -78,5 +149,22 @@ section {
 
 	.intro-section .button {
 	 align-self: flex-end;
+	}
+
+	.functionalities-section {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.functionalities-section section {
+		height: 250px;
+		max-width: 523px;
+	}
+
+	.functionalities-section p,
+	.functionalities-section h3 {
+		flex-grow: 1;
+		width: calc(100% - 208px);
 	}
 }
