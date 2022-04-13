@@ -32,14 +32,6 @@ section {
 	width: 100%;
 }
 
-.intro-section .button {
-	width: fit-content;
-	margin-top: 3%;
-	padding: 14px 30px;
-	border: 1px solid #373867;
-	border-radius: 5px;
-}
-
 .section-line {
 	width: 100%;
 	height: 3px;
@@ -96,6 +88,132 @@ h2.section-typo::after {
 	width: 103px;
 }
 
+.reasons-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 50px;
+}
+
+.long-title h2.section-typo::after {
+	width: 100%;
+}
+
+.reasons-section article {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 15px;
+	max-width: 350px;
+	background-color: rgba(55,56,103,0.1);
+}
+
+.reasons-section img {
+	width: 100%;
+}
+
+.reasons-section .button {
+	margin-top: auto;
+}
+
+.form-section form{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 4%;
+}
+
+.form-section div {
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+.form-section form > div {
+	display: flex;
+	flex-direction: column;
+}
+
+form input,
+form select,
+form textarea {
+	padding: 10px 12px;
+	border: 1px solid #373867;
+	border-radius: 4px;
+	color: rgba(55, 56, 103, 0.5);
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.form-section .radio-buttons {
+	display: flex;
+	width: 100%;
+}
+
+.form-section .radio-buttons div {
+	display: flex;
+	align-items: center;
+}
+
+.form-section .textarea {
+	width: 100%;
+}
+
+.form-section .checkboxes {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 5%;
+	width: 100%;
+}
+
+.form-section .div-checkbox {
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+}
+
+.form-section input[type=radio],
+.form-section input[type=checkbox] {
+	margin-top: 0;
+}
+
+.form-section .buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 5%;
+	width: 100%;
+}
+
+.form-section button[type=submit],
+.form-section button[type=reset] {
+	width: fit-content;
+	padding: 14px 30px;
+	border: 1px solid #373867;
+	border-radius: 5px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	color: #373867;
+	background-color: transparent;
+}
+
+.links-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.links-section div {
+		width: 30%;
+		margin-top: 5%;
+}
+
+.links-section ol {
+	padding-left: 20px;
+	list-style: decimal;
+}
+
 @media only screen and (min-width: 480px) {
 
 	.functionalities-section section {
@@ -121,6 +239,28 @@ h2.section-typo::after {
 		width: 198px;
 		margin-top: 10px;
 		margin-right: 10px;
+	}
+
+	.form-section form{
+		flex-direction: row;
+	}
+
+	.form-section div,
+	.form-section fieldset {
+		width: 48%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	.reasons-section article {
+		max-width: 440px;
+		height: 611px;
+	}
+
+	.links-section {
+		flex-direction: row;
+		justify-content: space-evenly;
 	}
 }
 
@@ -148,7 +288,7 @@ h2.section-typo::after {
 	}
 
 	.intro-section .button {
-	 align-self: flex-end;
+		align-self: flex-end;
 	}
 
 	.functionalities-section {
@@ -166,5 +306,17 @@ h2.section-typo::after {
 	.functionalities-section h3 {
 		flex-grow: 1;
 		width: calc(100% - 208px);
+	}
+
+	.long-title h2.section-typo::after {
+		width: calc(100% + 30px);
+	}
+
+	.reasons-section {
+		justify-content: flex-start;
+	}
+
+	.reasons-section article {
+		margin-right: 2%;
 	}
 }

@@ -40,6 +40,14 @@ body {
 	margin-top: 77px;
 }
 
+.button {
+	width: fit-content;
+	margin-top: 3%;
+	padding: 14px 30px;
+	border: 1px solid #373867;
+	border-radius: 5px;
+}
+
 @media only screen and (min-width: 768px) {
 	
 	.main-footer-container {

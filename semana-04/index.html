@@ -114,47 +114,49 @@
 						</div>
 					</section>
 					<span class="section-line"></span>
-					<section class="reasons-section">
-						<div><h2 class="section-typo">Why does this mean an improvement in your work</h2></div>
-						<article>
-							<img src="./assets/images/representative-image.png" alt="Representative image"/>
-							<h3 class="title-typo">Productivity booster</h3>
-							<p class="paragraph-typo">
-								Cras blandit vehicula eros, id dapibus lacus tristique ac. Nam dapibus purus semper, tincidunt massa sit
-								amet, euismod metus. Nunc metus dui, tincidunt eget massa nec, dapibus pellentesque tortor.
-							</p>
-							<a class="button-typo" href="#">More</a>
-						</article>
-						<article>
-							<img src="./assets/images/representative-image.png" alt="Representative image"/>
-							<h3 class="title-typo">Work traceability</h3>
-							<p class="paragraph-typo">
-								Duis quis ipsum enim. Quisque iaculis risus turpis, quis ornare lorem fringilla at. Vestibulum iaculis
-								 arcu et tortor tristique sollicitudin.
-							</p>
-							<a class="button-typo" href="#">More</a>
-						</article>
-						<article>
-							<img src="./assets/images/representative-image.png" alt="Representative image"/>
-							<h3 class="title-typo">Leadership and team management</h3>
-							<p class="paragraph-typo">
-								Duis non turpis consequat, laoreet libero a, pulvinar mauris. In hac habitasse platea dictumst.
-							</p>
-							<a class="button-typo" href="#">More</a>
-						</article>
-						<article>
-							<img src="./assets/images/representative-image.png" alt="Representative image"/>
-							<h3 class="title-typo">Decision making</h3>
-							<p class="paragraph-typo">
-								Aliquam convallis elit in pharetra luctus. Aenean ultrices est eu justo gravida, nec pretium arcu
-								 facilisis.
-							</p>
-							<p class="paragraph-typo">
-								Integer ipsum libero, finibus eget nisi non, volutpat aliquet leo. Nulla rhoncus nisl id sem accumsan,
-								cursus blandit tellus sollicitudin.
-							</p>
-							<a class="button-typo" href="#">More</a>
-						</article>
+					<section>
+						<div class="long-title"><h2 class="section-typo">Why does this mean an improvement in your work</h2></div>
+						<div class="reasons-section">
+							<article>
+								<img src="./assets/images/representative-image.png" alt="Representative image"/>
+								<h3 class="title-typo">Productivity booster</h3>
+								<p class="paragraph-typo">
+									Cras blandit vehicula eros, id dapibus lacus tristique ac. Nam dapibus purus semper, tincidunt massa sit
+									amet, euismod metus. Nunc metus dui, tincidunt eget massa nec, dapibus pellentesque tortor.
+								</p>
+								<a class="button button-typo" href="#">More</a>
+							</article>
+							<article>
+								<img src="./assets/images/representative-image.png" alt="Representative image"/>
+								<h3 class="title-typo">Work traceability</h3>
+								<p class="paragraph-typo">
+									Duis quis ipsum enim. Quisque iaculis risus turpis, quis ornare lorem fringilla at. Vestibulum iaculis
+									arcu et tortor tristique sollicitudin.
+								</p>
+								<a class="button button-typo" href="#">More</a>
+							</article>
+							<article>
+								<img src="./assets/images/representative-image.png" alt="Representative image"/>
+								<h3 class="title-typo">Leadership and team management</h3>
+								<p class="paragraph-typo">
+									Duis non turpis consequat, laoreet libero a, pulvinar mauris. In hac habitasse platea dictumst.
+								</p>
+								<a class="button button-typo" href="#">More</a>
+							</article>
+							<article>
+								<img src="./assets/images/representative-image.png" alt="Representative image"/>
+								<h3 class="title-typo">Decision making</h3>
+								<p class="paragraph-typo">
+									Aliquam convallis elit in pharetra luctus. Aenean ultrices est eu justo gravida, nec pretium arcu
+									facilisis.
+								</p>
+								<p class="paragraph-typo">
+									Integer ipsum libero, finibus eget nisi non, volutpat aliquet leo. Nulla rhoncus nisl id sem accumsan,
+									cursus blandit tellus sollicitudin.
+								</p>
+								<a class="button button-typo" href="#">More</a>
+							</article>
+						</div>
 					</section>
 					<span class="section-line"></span>
 					<section class="form-section">
@@ -164,7 +166,7 @@
 								<label for="name">Full Name</label>
 								<input id="name" name="full-name" type="text" placeholder="John Smith" required>
 							</div>
-							<div class="form-right">
+							<div>
 								<label for="email">Email Address</label>
 								<input id="email" name="email" type="email" placeholder="johnsmith@mail.com" required>
 							</div>
@@ -177,26 +179,36 @@
 									<option value="commercialization">Commercialization</option>
 								</select>
 							</div>
-							<fieldset class="form-right">
+							<fieldset>
 								<legend>Priority</legend>
 								<div class="radio-buttons">
-									<input id="low" name="priority" type="radio" checked>
-									<label for="low">Low</label>
-									<input id="medium" name="priority" type="radio">
-									<label for="medium">Medium</label>
-									<input id="high" name="priority" type="radio">
-									<label for="high">High</label>
+									<div>
+										<input id="low" name="priority" type="radio" checked>
+										<label for="low">Low</label>
+									</div>
+									<div>
+										<input id="medium" name="priority" type="radio">
+										<label for="medium">Medium</label>
+									</div>
+									<div>
+										<input id="high" name="priority" type="radio">
+										<label for="high">High</label>
+									</div>
 								</div>
 							</fieldset>
+							<div class="textarea">
 								<label for="inquiry">Ask about our system</label>
 								<textarea id="inquiry" name="inquiry" placeholder="Enter your message" required></textarea>
-							<div class="div-checkbox">
-								<input id="captcha" name="captcha" type="checkbox">
-								<label for="captcha">I am not a robot</label>
 							</div>
-							<div class="div-checkbox">
-								<input id="copy" name="copy" type="checkbox">
-								<label for="copy">Send me a copy</label>
+							<div class="checkboxes">
+								<div class="div-checkbox">
+									<input id="captcha" name="captcha" type="checkbox">
+									<label for="captcha">I am not a robot</label>
+								</div>
+								<div class="div-checkbox">
+									<input id="copy" name="copy" type="checkbox">
+									<label for="copy">Send me a copy</label>
+								</div>
 							</div>
 							<div class="buttons">
 								<button class="button-typo" type="submit">Submit</button>
@@ -274,8 +286,10 @@
 							<img src="./assets/icons/github-logo.png" alt="Github logo">
 						</a>
 					</nav>
-					<p>Rosario, Argentina</p>
-					<p>Copyright © 2022 Radium Rocket. All rights reserved.</p>
+					<div class="footer-text">
+						<p>Rosario, Argentina</p>
+						<p>Copyright © 2022 Radium Rocket. All rights reserved.</p>
+					</div>
 				</footer>
 			</div>
 		</div>
