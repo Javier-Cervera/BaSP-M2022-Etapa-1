@@ -35,5 +35,13 @@ It can be visited on:
 
 https://javier-cervera.github.io/BaSP-M2022-Etapa-1/semana-04/
 
+### Week 05
+
+We have done javascript exercises and refactored the work done on week 04.
+
+It can be visited on:
+
+https://javier-cervera.github.io/BaSP-M2022-Etapa-1/semana-05/
+
 
 _By Javier Cervera_
