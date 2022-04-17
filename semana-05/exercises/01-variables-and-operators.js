@@ -6,22 +6,22 @@ console.log('-- EXERCISE 1: VARIABLE AND OPERATORS');
 console.log('-Exercise 1.a:');
 var firstNumber = 9;
 var secondNumber = 3;
-var result = firstNumber + secondNumber;
-console.log(result);
+var twoNumberSum = firstNumber + secondNumber;
+console.log(twoNumberSum);
 
 /* b. Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable. */
 
 console.log('\n-Exercise 1.b:');
-var firstString = 'Hola ';
-var secondString = 'mundo!';
-result = firstString + secondString;
-console.log(result);
+var firstString = 'Hello ';
+var secondString = 'world!';
+var twoStringConcat = firstString + secondString;
+console.log(twoStringConcat);
 
 /* c. Crear dos variables de tipo String y sumar el largo de cada variable (cantidad de letras del string) guardando el
  resultado de la suma en una 3er variable (utilizar length). */
 
 console.log('\n-Exercise 1.c:');
-var firstStringForLength = 'cantidad ';
-var secondStringForLength = 'de letras';
-result = firstStringForLength.length + secondStringForLength.length;
-console.log(result);
+var firstStringForLength = 'number of';
+var secondStringForLength = ' letters';
+var twoStringLength = firstStringForLength.length + secondStringForLength.length;
+console.log(twoStringLength);
