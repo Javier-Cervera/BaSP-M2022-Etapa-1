@@ -6,7 +6,7 @@
 	width: 100%;
 	height: 77px;
 	padding: 0 18px;
-	background-color: #373867;
+	background-color: rgba(55, 56, 103, 1);
 }
 
 .header .logo {
@@ -16,7 +16,7 @@
 
 .header h1 {
 	margin: 0 auto;
-	color: #ffffff;
+	color: rgba(255, 255, 255, 1);
 }
 
 .header .sidebar-icon {

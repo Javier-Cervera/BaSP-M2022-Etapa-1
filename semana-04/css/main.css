@@ -28,8 +28,8 @@ section {
 }
 
 .intro-section figure img {
-	max-width: 495px;
 	width: 100%;
+	max-width: 495px;
 	border-radius: 10px;
 }
 
@@ -37,13 +37,13 @@ section {
 	width: 100%;
 	height: 3px;
 	margin: 8.8% 0 4.5%;
-	background-color: #AFAFC2;
+	background-color: rgba(175, 175, 194, 1);
 	border-radius: 4px;
 	content: "";
 }
 
 .main-footer-container > .section-line {
-	background-color: #AACE9B;
+	background-color: rgba(170, 206, 155, 1);
 }
 
 .functionalities-section {
@@ -63,7 +63,7 @@ h2.section-typo::after {
 	width: calc(100% + 30px);
 	height: 3px;
 	margin-top: 15px;
-	background-color: #AACE9B;
+	background-color: rgba(170, 206, 155, 1);
 	border-radius: 4px;
 	content: "";
 }
@@ -104,9 +104,9 @@ h2.section-typo::after {
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
-	gap: 15px;
 	max-width: 350px;
 	background-color: rgba(55,56,103,0.1);
+	gap: 15px;
 }
 
 .reasons-section img {
@@ -138,7 +138,7 @@ form input,
 form select,
 form textarea {
 	padding: 10px 12px;
-	border: 1px solid #373867;
+	border: 1px solid rgba(55, 56, 103, 1);
 	border-radius: 4px;
 	color: rgba(55, 56, 103, 0.5);
 	font-family: 'Roboto', sans-serif;
@@ -184,20 +184,34 @@ form textarea {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: 5%;
 	width: 100%;
+	gap: 5%;
 }
 
 .form-section button[type=submit],
 .form-section button[type=reset] {
 	width: fit-content;
 	padding: 14px 30px;
-	border: 1px solid #373867;
+	background-color: transparent;
+	border: 1px solid rgba(55, 56, 103, 1);
 	border-radius: 5px;
+	color: rgba(55, 56, 103, 1);
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
-	color: #373867;
-	background-color: transparent;
+}
+
+.form-section button[type=submit]:hover,
+.form-section button[type=reset]:hover {
+	background-color: rgba(55, 56, 103, 1);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: rgba(255, 255, 255, 1);
+}
+
+.form-section button[type=submit]:active,
+.form-section button[type=reset]:active {
+	background: rgba(170, 206, 155, 1);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: rgba(255, 255, 255, 1);
 }
 
 .links-section {
@@ -207,8 +221,8 @@ form textarea {
 }
 
 .links-section div {
-		width: 30%;
-		margin-top: 5%;
+	width: 30%;
+	margin-top: 5%;
 }
 
 .links-section ol {
@@ -222,11 +236,11 @@ form textarea {
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		align-items: flex-start;
 		justify-content: center;
+		align-items: flex-start;
 		align-content: flex-start;
-		text-align: left;
 		height: 265px;
+		text-align: left;
 	}
 
 	.functionalities-section h3 {
@@ -256,8 +270,8 @@ form textarea {
 @media only screen and (min-width: 768px) {
 
 	.reasons-section article {
-		max-width: 440px;
 		height: 611px;
+		max-width: 440px;
 	}
 
 	.links-section {
@@ -274,8 +288,8 @@ form textarea {
 	}
 	
 	.intro-section div {
-		max-width: 520px;
 		width: 50%;
+		max-width: 520px;
 		margin-right: 5%;
 	}
 	
@@ -315,10 +329,6 @@ form textarea {
 	}
 
 	.reasons-section {
-		justify-content: flex-start;
-	}
-
-	.reasons-section article {
-		margin-right: 2%;
+		justify-content: space-between;
 	}
 }

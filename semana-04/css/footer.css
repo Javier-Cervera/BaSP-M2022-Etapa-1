@@ -14,8 +14,9 @@ footer nav {
 }
 
 footer p {
-	text-align: center;
 	width: 65%;
+	margin: 0 auto;
+	text-align: center;
 	line-height: 25px;
 }
 

@@ -2,16 +2,16 @@ aside {
 	display: none;
 	position: fixed;
 	top: 77px;
-	height: 100%;
 	width: 184px;
+	height: 100%;
 	padding: 22px 13px;
-	background-color: #AACE9B;
+	background-color: rgba(170, 206, 155, 1);
 }
 
 .sidebar {
 	display: flex;
-	height: 370px;
 	flex-direction: column;
+	height: 370px;
 }
 
 .sidebar span::after {
@@ -19,7 +19,7 @@ aside {
 	width: 47px;
 	height: 3px;
 	margin: 9px 0px 22px 0px;
-	background-color: #373867;
+	background-color: rgba(55, 56, 103, 1);
 	border-radius: 4px;
 	content: "";
 }
@@ -37,8 +37,8 @@ aside {
 .sidebar address {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	flex-grow: 1;
+	justify-content: space-between;
 	margin-top: 15px;
 }
 
@@ -47,8 +47,8 @@ aside {
 }
 
 .sidebar address img{
-	margin-right: 5px;
 	align-self: flex-start;
+	margin-right: 5px;
 }
 
 @media only screen and (min-width: 768px) {
