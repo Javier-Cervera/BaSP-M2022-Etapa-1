@@ -11,13 +11,9 @@ main {
 	width: 90%;
 }
 
-.header {
-	position: initial;
-}
-
 .main-footer-container {
 	flex-grow: 1;
-	margin-top: 0px;
+	margin-top: 77px;
 	padding-top: 0px;
 }
 
@@ -29,12 +25,9 @@ main {
 }
 
 .login-form > div {
-	margin: 5% 0;
-}
-
-.login-form > div {
 	display: flex;
 	flex-direction: column;
+	margin: 5% 0;
 }
 
 .login-form input{
