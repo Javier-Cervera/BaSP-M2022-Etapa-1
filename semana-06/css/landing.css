@@ -44,6 +44,7 @@ section {
 
 .main-footer-container > .section-line {
 	background-color: rgba(170, 206, 155, 1);
+	margin-bottom: 0px;
 }
 
 .functionalities-section {
@@ -134,9 +135,9 @@ h2.section-typo::after {
 	flex-direction: column;
 }
 
-form input,
-form select,
-form textarea {
+.form-section input,
+.form-section select,
+.form-section textarea {
 	padding: 10px 12px;
 	border: 1px solid rgba(55, 56, 103, 1);
 	border-radius: 4px;

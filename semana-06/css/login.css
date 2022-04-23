@@ -1,0 +1,103 @@
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: center;
+	width: 90%;
+}
+
+.header {
+	position: initial;
+}
+
+.main-footer-container {
+	flex-grow: 1;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.login-container {
+	margin: 5% 0;
+	padding: 5%;
+	border: 4px solid #373867;
+	border-radius: 10px;
+}
+
+.login-form > div {
+	margin: 5% 0;
+}
+
+.login-form > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-form input{
+	padding: 10px 12px;
+	border: 1px solid rgba(55, 56, 103, 1);
+	border-radius: 4px;
+	color: rgba(55, 56, 103, 0.5);
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.login-form .buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	gap: 5%;
+}
+
+.login-form button[type=submit],
+.login-form button[type=reset] {
+	width: fit-content;
+	padding: 14px 10px;
+	background-color: transparent;
+	border: 1px solid rgba(55, 56, 103, 1);
+	border-radius: 5px;
+	color: rgba(55, 56, 103, 1);
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.login-form button[type=submit]:hover,
+.login-form button[type=reset]:hover {
+	background-color: rgba(55, 56, 103, 1);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: rgba(255, 255, 255, 1);
+}
+
+.login-form button[type=submit]:active,
+.login-form button[type=reset]:active {
+	background: rgba(170, 206, 155, 1);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: rgba(255, 255, 255, 1);
+}
+
+.footer::before {
+	width: 100%;
+	height: 3px;
+	margin-bottom: 2.5%;
+	background-color: rgba(170, 206, 155, 1);
+	border-radius: 4px;
+	content: "";
+}
+
+@media only screen and (min-width: 768px) {
+	main {
+		max-width: 673px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.footer::before {
+		margin-bottom: 0;
+	}
+}
