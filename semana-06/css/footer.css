@@ -47,7 +47,11 @@ footer p {
 	footer nav {
 		justify-content: space-between;
 		width: 35%;
-		margin: 1.5% 0;
+		margin: auto 0;
+	}
+
+	.footer-text {
+		margin: auto 0;
 	}
 
 	footer p {
