@@ -1,14 +1,15 @@
 window.onload = function() {
-	// Email validation
+	/* Email validation */
 	var email = document.getElementById('email');
-	function validateEmail () {
+	function validateEmail() {
 		var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 		if (emailRegex.test(email.value)) {
 			// Check if there isn't already a valid message
 			if (email.parentElement.querySelector(".valid") === null) {
 				email.insertAdjacentHTML('afterend', '<p class="valid">Valid email</p>');
 			}
-		} else if (!emailRegex.test(email.value) && email.value != ''){
+		// Check if the validation doesn't pass, and if the string isn't empty
+		} else if (!emailRegex.test(email.value) && email.value != '') {
 			email.insertAdjacentHTML('afterend', '<p class="invalid">Invalid email format</p>');
 			// Check if there is an old valid message and delete it
 			if (email.parentElement.querySelector(".valid") !== null) {
@@ -20,16 +21,17 @@ window.onload = function() {
 			email.parentElement.querySelector('.valid').remove();
 		}
 	}
-	function focusEmail() {
+	function focus(element) {
 		// Check if there is an error message
-		if (email.nextSibling.className == 'invalid') {
-			email.parentElement.querySelector('.invalid').remove();
+		if (element.nextSibling.className == 'invalid') {
+			element.parentElement.querySelector('.invalid').remove();
 		}
 	}
 	email.addEventListener('blur', validateEmail);
-	email.addEventListener('focus', focusEmail);
+	// Anonymous function to pass parameters into the event listener
+	email.addEventListener('focus', function(){focus(email)});
 
-	// Password validation
+	/* Password validation */
 	var savedPassword = 'radium22'
 	var password = document.getElementById('password');
 	function validatePassword() {
@@ -67,23 +69,17 @@ window.onload = function() {
 				 || (s.charCodeAt() >= 97 && s.charCodeAt() < 123)
 			});
 	}
-	function focusPassword() {
-		// Check if there is an error message
-		if (password.nextSibling.className == 'invalid') {
-			password.parentElement.querySelector('.invalid').remove();
-		}
-	}
 	password.addEventListener('blur', validatePassword);
-	password.addEventListener('focus', focusPassword);
+	password.addEventListener('focus', function(){focus(password)});
 
-	// Popup
-	var loginbutton = document.getElementsByClassName('button-typo login')[0];
+	/* Popup */
+	var loginButton = document.getElementsByClassName('button-typo login')[0];
 	var main = document.getElementsByTagName('main')[0];
 	function createModal() {
 		main.appendChild(document.createElement('div'));
 		var popup = main.lastChild;
 		popup.classList.add("login-modal");
-		popup.insertAdjacentHTML('afterbegin', '<h2 class="title-typo">Log In confirmation</p>');
+		popup.insertAdjacentHTML('afterbegin', '<h2 class="title-typo">Log in confirmation</p>');
 		popup.insertAdjacentHTML('beforeend', '<p>Email: <span>' + email.value + '</span></p>');
 		popup.insertAdjacentHTML('beforeend', verifyNullHtml(email.nextElementSibling));
 		popup.insertAdjacentHTML('beforeend', '<p>Password: <span>' + password.value + '</span></p>');
@@ -101,5 +97,5 @@ window.onload = function() {
 	function deleteModal() {
 		main.lastChild.remove();
 	}
-	loginbutton.addEventListener('click', createModal);
+	loginButton.addEventListener('click', createModal);
 }
