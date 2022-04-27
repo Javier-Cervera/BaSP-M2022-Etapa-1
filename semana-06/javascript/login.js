@@ -46,7 +46,7 @@ window.onload = function() {
 		// Check if there isn't a valid message already
 		} else if (password.parentElement.querySelector(".valid") === null) {
 			if (password.value === savedPassword) {
-				password.insertAdjacentHTML('afterend', '<p class="valid">Valid password</p>');
+				password.insertAdjacentHTML('afterend', '<p class="valid">Valid default password</p>');
 			}	else if (validateNumAndChar(password.value) && password.value.length >= 8) {
 				password.insertAdjacentHTML('afterend', '<p class="valid">Valid password</p>');
 			}
