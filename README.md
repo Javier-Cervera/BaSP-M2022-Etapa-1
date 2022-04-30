@@ -45,7 +45,7 @@ https://javier-cervera.github.io/BaSP-M2022-Etapa-1/semana-05/
 
 ### Week 06
 
-We have done the login and signup, using javascript, adding to the work done on the Landing on week 05.
+We have done the login and signup using javascript, adding to the work done on the Landing on week 05.
 
 It can be visited on:
 
@@ -53,8 +53,7 @@ https://javier-cervera.github.io/BaSP-M2022-Etapa-1/semana-06/views/
 
 ### Week 07
 
-We have done the HTTP requests, of the form's data validated on the client side, to the web server, adding to the work
- done on week 06.
+We have done the HTTP requests of the form data validated on the client-side to the web server, which adds to the work done in week 06.
 
 It can be visited on:
 
