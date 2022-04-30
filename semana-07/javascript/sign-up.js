@@ -357,4 +357,13 @@ window.onload = function () {
 		main.lastChild.remove();
 	}
 	signupButton.addEventListener('click', createModal);
+		/* HTTP Request */
+		function requestAPI() {
+			var fetchPromise = "https://basp-m2022-api-rest-server.herokuapp.com/signup";
+			if (email.nextSibling.className == 'valid' && password.nextSibling.className == 'valid') {
+				console.log(fetchPromise);
+			}
+		}
+	
+		loginButton.addEventListener('click', requestAPI);
 }
