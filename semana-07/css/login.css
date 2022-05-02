@@ -48,13 +48,13 @@ main {
 	border-radius: 10px;
 }
 
-.login-form > div {
+.login-form>div {
 	display: flex;
 	flex-direction: column;
 	margin: 5% 0;
 }
 
-.login-form input{
+.login-form input {
 	padding: 10px 12px;
 	border: 1px solid rgba(55, 56, 103, 1);
 	border-radius: 4px;
@@ -77,13 +77,26 @@ main {
 	color: rgba(73, 163, 123, 1)
 }
 
-.invalid{
+.invalid {
 	padding-top: 5px;
 	color: rgba(243, 52, 19, 1);
 }
 
-.login-modal {
+.login-modal-background {
 	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login-modal {
 	display: flex;
 	flex-direction: column;
 	align-self: center;
@@ -93,10 +106,10 @@ main {
 	border: 4px solid rgba(55, 56, 103, 1);
 	border-radius: 10px;
 	box-shadow: 0px 10px 23px rgba(0, 0, 0, 0.12);
-	overflow-y: auto;
+	overflow: auto;
 }
 
-.login-modal p{
+.login-modal p {
 	padding-top: 5px;
 }
 
@@ -104,9 +117,9 @@ main {
 	font-weight: 700;
 }
 
-.login-modal p span.valid,
-.login-modal p span.invalid {
-	line-height: 30px;
+.login-modal div {
+	margin-top: 15px;
+	font-weight: 700;
 }
 
 .login-modal button {

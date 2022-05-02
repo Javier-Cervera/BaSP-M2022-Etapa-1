@@ -86,6 +86,10 @@ window.onload = function () {
 		popup.insertAdjacentHTML('beforeend', verifyNullHtml(password.nextElementSibling));
 		popup.insertAdjacentHTML('beforeend', '<button class="button-typo" type="button">Close</button>');
 		popup.getElementsByTagName('button')[0].addEventListener('click', deleteModal);
+		// Div for darker background
+		main.appendChild(document.createElement('div'));
+		main.lastChild.classList.add('login-modal-background');
+		main.lastChild.appendChild(main.getElementsByClassName('login-modal')[0])
 	}
 	function verifyNullHtml(element) {
 		if (element === null) {
@@ -98,7 +102,7 @@ window.onload = function () {
 		main.lastChild.remove();
 	}
 	loginButton.addEventListener('click', createModal);
-	
+
 	/* HTTP Request */
 	function requestAPI() {
 		var fetchPromise = "https://basp-m2022-api-rest-server.herokuapp.com/login";
@@ -107,17 +111,23 @@ window.onload = function () {
 			fetchPromise += `?email=${email.value}&password=${password.value}`;
 			fetch(fetchPromise)
 				.then(function (response) {
-					return response.json();
+					if (response.ok) {
+						popupButton.insertAdjacentHTML('beforebegin', '<div><p>Response: </p></div>');
+						return response.json();
+					} else {
+						popupButton.insertAdjacentHTML('beforebegin', '<div><p>Error: </p></div>');
+						return response.json();
+					}
 				})
 				.then(function (data) {
 					if (data.success) {
-						popupButton.insertAdjacentHTML('beforebegin', `<p><span class="valid">${data.msg}</span></p>`);
+						popupButton.insertAdjacentHTML('beforebegin', `<p class="valid">${data.msg}</p>`);
 					} else {
-						popupButton.insertAdjacentHTML('beforebegin', `<p><span class="invalid">${data.msg}</span></p>`);
+						popupButton.insertAdjacentHTML('beforebegin', `<p class="invalid">${data.msg}</p>`);
 					}
 				})
 				.catch(function (response) {
-					popupButton.insertAdjacentHTML('beforebegin', '<p><span class="invalid">Network error</span></p>');
+					popupButton.insertAdjacentHTML('beforebegin', '<div><p class="invalid">Network error</p></div>');
 				});
 		}
 	}
