@@ -102,7 +102,12 @@ window.onload = function () {
 	function requestAPI() {
 		var fetchPromise = "https://basp-m2022-api-rest-server.herokuapp.com/login";
 		if (email.nextSibling.className == 'valid' && password.nextSibling.className == 'valid') {
-			console.log(fetchPromise);
+			fetchPromise += `?email=${email.value}&password=${password.value}`;
+			fetch(fetchPromise)
+				.then(function (response) {
+					console.log(response);
+				})
+				;
 		}
 	}
 
