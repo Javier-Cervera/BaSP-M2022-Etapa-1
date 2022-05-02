@@ -53,7 +53,7 @@ https://javier-cervera.github.io/BaSP-M2022-Etapa-1/semana-06/views/
 
 ### Week 07
 
-We have done the HTTP requests of the form data validated on the client-side to the web server, which adds to the work done in week 06.
+We have done the HTTP requests to the web server of the form data validated on the client-side, which adds to the work done in week 06.
 
 It can be visited on:
 

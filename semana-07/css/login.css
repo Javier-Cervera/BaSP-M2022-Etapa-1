@@ -104,6 +104,11 @@ main {
 	font-weight: 700;
 }
 
+.login-modal p span.valid,
+.login-modal p span.invalid {
+	line-height: 30px;
+}
+
 .login-modal button {
 	align-self: flex-end;
 	margin-top: 15px;

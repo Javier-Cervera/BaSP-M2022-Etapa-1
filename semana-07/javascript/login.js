@@ -98,18 +98,28 @@ window.onload = function () {
 		main.lastChild.remove();
 	}
 	loginButton.addEventListener('click', createModal);
+	
 	/* HTTP Request */
 	function requestAPI() {
 		var fetchPromise = "https://basp-m2022-api-rest-server.herokuapp.com/login";
+		var popupButton = main.lastChild.getElementsByTagName('button')[0];
 		if (email.nextSibling.className == 'valid' && password.nextSibling.className == 'valid') {
 			fetchPromise += `?email=${email.value}&password=${password.value}`;
 			fetch(fetchPromise)
 				.then(function (response) {
-					console.log(response);
+					return response.json();
 				})
-				;
+				.then(function (data) {
+					if (data.success) {
+						popupButton.insertAdjacentHTML('beforebegin', `<p><span class="valid">${data.msg}</span></p>`);
+					} else {
+						popupButton.insertAdjacentHTML('beforebegin', `<p><span class="invalid">${data.msg}</span></p>`);
+					}
+				})
+				.catch(function (response) {
+					popupButton.insertAdjacentHTML('beforebegin', '<p><span class="invalid">Network error</span></p>');
+				});
 		}
 	}
-
 	loginButton.addEventListener('click', requestAPI);
 }
