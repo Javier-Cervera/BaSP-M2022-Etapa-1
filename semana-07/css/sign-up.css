@@ -87,8 +87,21 @@ main {
 	color: rgba(243, 52, 19, 1);
 }
 
-.signup-modal {
+.signup-modal-background {
 	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.signup-modal {
 	display: flex;
 	flex-direction: column;
 	align-self: center;
@@ -100,7 +113,7 @@ main {
 	border: 4px solid rgba(55, 56, 103, 1);
 	border-radius: 10px;
 	box-shadow: 0px 10px 23px rgba(0, 0, 0, 0.12);
-	overflow-y: auto;
+	overflow: auto;
 }
 
 .signup-modal p {

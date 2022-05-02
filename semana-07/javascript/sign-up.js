@@ -345,6 +345,9 @@ window.onload = function () {
 		popup.insertAdjacentHTML('beforeend', verifyNullHtml(passwordRepeat.nextElementSibling));
 		popup.insertAdjacentHTML('beforeend', '<button class="button-typo" type="button">Close</button>');
 		popup.getElementsByTagName('button')[0].addEventListener('click', deleteModal);
+		main.appendChild(document.createElement('div'));
+		main.lastChild.classList.add('signup-modal-background');
+		main.lastChild.appendChild(main.getElementsByClassName('signup-modal')[0])
 	}
 	function verifyNullHtml(element) {
 		if (element === null) {
@@ -357,13 +360,69 @@ window.onload = function () {
 		main.lastChild.remove();
 	}
 	signupButton.addEventListener('click', createModal);
-		/* HTTP Request */
-		function requestAPI() {
-			var fetchPromise = "https://basp-m2022-api-rest-server.herokuapp.com/signup";
-			if (email.nextSibling.className == 'valid' && password.nextSibling.className == 'valid') {
-				console.log(fetchPromise);
-			}
+
+	/* HTTP Request */
+	var inputs = [fname, lname, dni, bday, phone, address, location, postal, email, password, passwordRepeat];
+	function requestAPI() {
+		var params = {
+			name: fname.value,
+			lastName: lname.value,
+			dni: dni.value,
+			dob: bday.value,
+			phone: phone.value,
+			address: address.value,
+			city: location.value,
+			zip: postal.value,
+			email: email.value,
+			password: password.value,
 		}
-	
-		loginButton.addEventListener('click', requestAPI);
+		var fetchPromise = "https://basp-m2022-api-rest-server.herokuapp.com/signup";
+		var popupButton = main.lastChild.getElementsByTagName('button')[0];
+		if (inputs.every(function (element) { return element.nextSibling.className == 'valid' })) {
+			fetchPromise += '?';
+			for (var key in params) {
+				if (key != 'password') {
+					fetchPromise += `${key}=${params[key]}&`
+				} else {
+					fetchPromise += `${key}=${params[key]}`
+				}
+				localStorage.setItem(key, params[key]);
+			}
+			// finalFetchPromise = fetchPromise.replaceAll(' ', '-')
+			console.log(fetchPromise)
+			// Object.values(params).forEach(function (value, index, array) {
+			// 	if (index != array.length - 1) {
+			// 		arrayfetchPromise += `${value}`
+			// 	}
+			// })
+			// fetch(fetchPromise)
+			// 	fetch(fetchPromise)
+			// 		.then(function (response) {
+			// 			if (response.ok) {
+			// 				popupButton.insertAdjacentHTML('beforebegin', '<div><p>Response: </p></div>');
+			// 				return response.json();
+			// 			} else {
+			// 				popupButton.insertAdjacentHTML('beforebegin', '<div><p>Error: </p></div>');
+			// 				return response.json();
+			// 			}
+			// 		})
+			// 		.then(function (data) {
+			// 			if (data.success) {
+			// 				popupButton.insertAdjacentHTML('beforebegin', `<p class="valid">${data.msg}</p>`);
+			// 			} else {
+			// 				popupButton.insertAdjacentHTML('beforebegin', `<p class="invalid">${data.msg}</p>`);
+			// 			}
+			// 		})
+			// 		.catch(function (response) {
+			// 			popupButton.insertAdjacentHTML('beforebegin', '<div><p class="invalid">Network error</p></div>');
+			// 		});
+		}
+	}
+	signupButton.addEventListener('click', requestAPI);
+
+	/* Local Storage check */
+	var paramsKeys = ['name', 'lastName', 'dni', 'dob', 'phone', 'address', 'city', 'zip', 'email', 'password'];
+	paramsKeys.forEach(function (key, index) {
+		inputs[index].value = localStorage.getItem(key);
+	})
 }
