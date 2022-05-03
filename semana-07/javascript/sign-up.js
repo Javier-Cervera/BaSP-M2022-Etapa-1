@@ -82,19 +82,11 @@ window.onload = function () {
 	// Date of birth validation
 	var bday = document.getElementById('birthday');
 	function validateBday() {
+		var bdayDate = new Date(bday.value);
+		// Correct Argentina GMT
+		bdayDate.setUTCHours(3);
 		var todayDate = new Date();
-		var bdayDate = new Date(bday.value.substring(6), bday.value.substring(3, 5) - 1, bday.value.substring(0, 2));
-		// Date format validation
-		if (inRange(bday.value.substring(0, 2), 0, 31)
-			&& bday.value.substring(2, 3) == '/'
-			&& inRange(bday.value.substring(3, 5), 0, 12)
-			&& bday.value.substring(5, 6) == '/'
-			&& inRange(bday.value.substring(6), 1850, 2022)
-			// Relation day-month (february 28 or 29 days for example)
-			&& daysInMonth(bday.value.substring(3, 5), bday.value.substring(6)) >= bday.value.substring(0, 2)
-			// Current date validation
-			&& bdayDate <= todayDate
-		) {
+		if (bdayDate <= todayDate) {
 			if (bday.parentElement.querySelector(".valid") === null) {
 				bday.insertAdjacentHTML('afterend', '<p class="valid">Valid birthday</p>');
 			}
@@ -107,23 +99,7 @@ window.onload = function () {
 		if (bday.nextSibling.className == 'valid' && bday.value == '') {
 			bday.parentElement.querySelector('.valid').remove();
 		}
-	}
-	function daysInMonth(m, y) {
-		switch (m) {
-			case '02':
-				// Leap year
-				return (y % 4 == 0 && y % 100) || y % 400 == 0 ? 29 : 28;
-			case '04':
-			case '06':
-			case '09':
-			case '11':
-				return 30;
-			default:
-				return 31
-		}
-	}
-	function inRange(n, start, end) {
-		return n >= start && n <= end;
+		return bdayDate;
 	}
 	bday.addEventListener('blur', validateBday);
 	bday.addEventListener('focus', function () { focus(bday) });
@@ -364,6 +340,7 @@ window.onload = function () {
 	/* HTTP Request */
 	var inputs = [fname, lname, dni, bday, phone, address, location, postal, email, password, passwordRepeat];
 	function requestAPI() {
+		bdayValid = validateBday();
 		var params = {
 			name: fname.value,
 			lastName: lname.value,
@@ -376,46 +353,48 @@ window.onload = function () {
 			email: email.value,
 			password: password.value,
 		}
-		var fetchPromise = "https://basp-m2022-api-rest-server.herokuapp.com/signup";
+		var fetchPromise = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
 		var popupButton = main.lastChild.getElementsByTagName('button')[0];
 		if (inputs.every(function (element) { return element.nextSibling.className == 'valid' })) {
 			fetchPromise += '?';
 			for (var key in params) {
-				if (key != 'password') {
+				if (key != 'password' && key != 'dob') {
 					fetchPromise += `${key}=${params[key]}&`
+				} else if (key == 'dob') {
+					// Format date MM/DD/YYYY adding '0' before a single digit day or month, also correcting monthIndex (+1)
+					fetchPromise += `${key}=${("0" + (bdayValid.getMonth() + 1)).slice(-2)}`
+					+ `/${("0" + (bdayValid.getDate())).slice(-2)}/${bdayValid.getFullYear()}&`;
 				} else {
 					fetchPromise += `${key}=${params[key]}`
 				}
-				localStorage.setItem(key, params[key]);
 			}
-			// finalFetchPromise = fetchPromise.replaceAll(' ', '-')
 			console.log(fetchPromise)
-			// Object.values(params).forEach(function (value, index, array) {
-			// 	if (index != array.length - 1) {
-			// 		arrayfetchPromise += `${value}`
-			// 	}
-			// })
-			// fetch(fetchPromise)
-			// 	fetch(fetchPromise)
-			// 		.then(function (response) {
-			// 			if (response.ok) {
-			// 				popupButton.insertAdjacentHTML('beforebegin', '<div><p>Response: </p></div>');
-			// 				return response.json();
-			// 			} else {
-			// 				popupButton.insertAdjacentHTML('beforebegin', '<div><p>Error: </p></div>');
-			// 				return response.json();
-			// 			}
-			// 		})
-			// 		.then(function (data) {
-			// 			if (data.success) {
-			// 				popupButton.insertAdjacentHTML('beforebegin', `<p class="valid">${data.msg}</p>`);
-			// 			} else {
-			// 				popupButton.insertAdjacentHTML('beforebegin', `<p class="invalid">${data.msg}</p>`);
-			// 			}
-			// 		})
-			// 		.catch(function (response) {
-			// 			popupButton.insertAdjacentHTML('beforebegin', '<div><p class="invalid">Network error</p></div>');
-			// 		});
+			fetch(fetchPromise)
+				.then(function (response) {
+					if (response.ok) {
+						popupButton.insertAdjacentHTML('beforebegin', '<div><p>Response: </p></div>');
+						for (var key in params) {
+							localStorage.setItem(key, params[key]);
+						}
+						return response.json();
+					} else {
+						popupButton.insertAdjacentHTML('beforebegin', '<div><p>Error: </p></div>');
+						return response.json();
+					}
+				})
+				.then(function (data) {
+					console.log(data);
+					if (data.success) {
+						popupButton.insertAdjacentHTML('beforebegin', `<p class="valid">${data.msg}</p>`);
+					} else {
+						data.errors.forEach(function (error) {
+							popupButton.insertAdjacentHTML('beforebegin', `<p class="invalid">${error.msg}</p>`);
+						})
+					}
+				})
+				.catch(function (response) {
+					popupButton.insertAdjacentHTML('beforebegin', '<div><p class="invalid">Network error</p></div>');
+				});
 		}
 	}
 	signupButton.addEventListener('click', requestAPI);

@@ -124,6 +124,11 @@ main {
 	font-weight: 700;
 }
 
+.signup-modal div {
+	margin-top: 15px;
+	font-weight: 700;
+}
+
 .signup-modal button {
 	align-self: flex-end;
 	margin-top: 15px;

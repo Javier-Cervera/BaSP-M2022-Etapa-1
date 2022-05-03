@@ -105,7 +105,7 @@ window.onload = function () {
 
 	/* HTTP Request */
 	function requestAPI() {
-		var fetchPromise = "https://basp-m2022-api-rest-server.herokuapp.com/login";
+		var fetchPromise = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
 		var popupButton = main.lastChild.getElementsByTagName('button')[0];
 		if (email.nextSibling.className == 'valid' && password.nextSibling.className == 'valid') {
 			fetchPromise += `?email=${email.value}&password=${password.value}`;
