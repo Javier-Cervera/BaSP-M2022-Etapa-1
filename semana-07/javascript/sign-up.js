@@ -82,10 +82,10 @@ window.onload = function () {
 	// Date of birth validation
 	var bday = document.getElementById('birthday');
 	function validateBday() {
-		var bdayDate = new Date(bday.value);
-		// Correct Argentina GMT
-		bdayDate.setUTCHours(3);
 		var todayDate = new Date();
+		// Correct Argentina GMT
+		var bdayDate = new Date(bday.value);
+		bdayDate.setUTCHours(3);
 		if (bdayDate <= todayDate) {
 			if (bday.parentElement.querySelector(".valid") === null) {
 				bday.insertAdjacentHTML('afterend', '<p class="valid">Valid birthday</p>');
@@ -327,7 +327,7 @@ window.onload = function () {
 	}
 	function verifyNullHtml(element) {
 		if (element === null) {
-			return '<p class="invalid">Value not entered</p>';
+			return '<p class="invalid">Value not entered (or if it was returned from storage, please validate it)</p>';
 		} else {
 			return element.outerHTML;
 		}
@@ -363,19 +363,16 @@ window.onload = function () {
 				} else if (key == 'dob') {
 					// Format date MM/DD/YYYY adding '0' before a single digit day or month, also correcting monthIndex (+1)
 					fetchPromise += `${key}=${("0" + (bdayValid.getMonth() + 1)).slice(-2)}`
-					+ `/${("0" + (bdayValid.getDate())).slice(-2)}/${bdayValid.getFullYear()}&`;
+						+ `/${("0" + (bdayValid.getDate())).slice(-2)}/${bdayValid.getFullYear()}&`;
 				} else {
 					fetchPromise += `${key}=${params[key]}`
 				}
 			}
-			console.log(fetchPromise)
 			fetch(fetchPromise)
 				.then(function (response) {
 					if (response.ok) {
 						popupButton.insertAdjacentHTML('beforebegin', '<div><p>Response: </p></div>');
-						for (var key in params) {
-							localStorage.setItem(key, params[key]);
-						}
+						// Local Storage set up
 						return response.json();
 					} else {
 						popupButton.insertAdjacentHTML('beforebegin', '<div><p>Error: </p></div>');
@@ -383,9 +380,11 @@ window.onload = function () {
 					}
 				})
 				.then(function (data) {
-					console.log(data);
 					if (data.success) {
 						popupButton.insertAdjacentHTML('beforebegin', `<p class="valid">${data.msg}</p>`);
+						for (var key in data.data) {
+							localStorage.setItem(key, data.data[key]);
+						}
 					} else {
 						data.errors.forEach(function (error) {
 							popupButton.insertAdjacentHTML('beforebegin', `<p class="invalid">${error.msg}</p>`);
@@ -402,6 +401,13 @@ window.onload = function () {
 	/* Local Storage check */
 	var paramsKeys = ['name', 'lastName', 'dni', 'dob', 'phone', 'address', 'city', 'zip', 'email', 'password'];
 	paramsKeys.forEach(function (key, index) {
-		inputs[index].value = localStorage.getItem(key);
+		if (key != 'dob') {
+			inputs[index].value = localStorage.getItem(key);
+		}	else {
+			// Year - Day - Month format for input
+			inputs[index].value = localStorage.getItem(key).substring(6, 10) + '-'
+			+ localStorage.getItem(key).substring(0, 2) + '-'
+			+ localStorage.getItem(key).substring(3, 5);
+		}
 	})
 }
